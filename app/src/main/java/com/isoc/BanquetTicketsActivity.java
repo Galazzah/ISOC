@@ -1,15 +1,12 @@
 package com.isoc;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.ActionMode;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,15 +14,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by z on 5/20/2015.
@@ -81,7 +74,7 @@ public class BanquetTicketsActivity extends Activity {
         );
 
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
 
         q.appendTextQuery("banquetTitle", title);
         q.appendTextQuery("banquetDesc", desc);

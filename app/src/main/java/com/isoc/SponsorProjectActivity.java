@@ -2,13 +2,10 @@ package com.isoc;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -151,7 +148,7 @@ public class SponsorProjectActivity extends Activity {
     }
 
     private void makeProjectRadios(RadioGroup projects) {
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
 
         for (int i = 1; i <= 8; i++) {
             RadioButton rb = new RadioButton(this);

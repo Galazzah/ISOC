@@ -8,14 +8,11 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by z on 6/18/2015.
@@ -114,7 +111,7 @@ public class PersonalInformationActivity extends Activity{
                                 String name, String address, String city, String state,
                                 String zip, String mobile, String email, String age, String gender) {
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         if(!committees.equals(""))
             q.addToCommittee("Committees:" + committees, name, address, city, state, zip, mobile, email, age, gender);
         if(newsletter)

@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -65,7 +64,7 @@ public class IftarSlotActivity extends Activity {
         date.setText(getDayOfWeek(getDate(day)) + ", " + getMonth(getDate(day)) + " " + getDate(day).getDate() + " (Day " + day + ")");
         total.setText("$0");
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         taken.addTextChangedListener(
                 new TextWatcher() {
                     @Override

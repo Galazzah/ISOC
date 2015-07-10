@@ -47,7 +47,7 @@ public class EidPrayerInfoActivity extends Activity {
                 }
         );
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         q.appendTextQuery("eidTitle", title);
         q.appendTextQuery("eidDate", date);
         q.appendTextQuery("eidLoc", location);

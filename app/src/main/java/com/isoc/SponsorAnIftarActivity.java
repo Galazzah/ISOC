@@ -2,7 +2,6 @@ package com.isoc;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Date;
 
@@ -55,7 +53,7 @@ public class SponsorAnIftarActivity extends Activity {
         );
 
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
 
         d = new Date();
         d.setDate(14);

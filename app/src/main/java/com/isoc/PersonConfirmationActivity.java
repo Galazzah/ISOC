@@ -14,7 +14,7 @@ public class PersonConfirmationActivity extends Activity {
         setContentView(R.layout.activity_person_confirmation);
 
         Intent source = getIntent();
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         String from = getIntent().getStringExtra("from");
 
         TextView confirmation = (TextView)findViewById(R.id.confirmation);

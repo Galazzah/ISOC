@@ -2,8 +2,6 @@ package com.isoc;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +18,7 @@ import java.util.Date;
  */
 public class TodayAtISOCActivity extends Activity {
 
-    private Querier q;
+    private QueryHelper q;
     private ImageButton backDay, nextDay;
     private TextView dayView, fastBegins, fastEnds, menu1, menu2, menu3, menu4, tarawih, khatira, khateebStatic, khateeb, specialEvents1, specialEvents2;
     private int day;
@@ -68,7 +66,7 @@ public class TodayAtISOCActivity extends Activity {
                 }
         );
 
-        q = new Querier(this);
+        q = new QueryHelper(this);
 
         q.makeLink("timetableURL", timetable);
         q.makeLink("programsURL", programs);
@@ -117,7 +115,7 @@ public class TodayAtISOCActivity extends Activity {
 
 
 
-    private void query(Querier q, int day, Date date) {
+    private void query(QueryHelper q, int day, Date date) {
 
         dayView.setText(parseDay(date.getDay()) + ", " + parseMonth(date.getMonth()) + " " + date.getDate() + " (Day " + day + ")");
         q.resetTextQuery("fastBegins" + day, fastBegins);

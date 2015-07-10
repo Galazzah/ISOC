@@ -39,7 +39,7 @@ public class FortyAtFortyActivity extends Activity {
         );
 
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         q.appendTextQuery("40x40_amt", sponsors);
 
         project.setOnClickListener(

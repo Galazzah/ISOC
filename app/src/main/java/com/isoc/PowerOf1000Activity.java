@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -41,7 +40,7 @@ public class PowerOf1000Activity extends Activity {
         );
 
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         q.appendTextQuery("pow1kCurSponsors", sponsors);
 
         project.setOnClickListener(

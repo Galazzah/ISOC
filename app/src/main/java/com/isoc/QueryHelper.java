@@ -28,12 +28,12 @@ import java.util.Map;
 /**
  * Created by z on 6/16/2015.
  */
-public class Querier {
+public class QueryHelper {
 
     private RequestQueue rq;
     private Context c;
 
-    public Querier(Context c) {
+    public QueryHelper(Context c) {
         rq = Volley.newRequestQueue(c);
         this.c = c;
     }
@@ -46,7 +46,7 @@ public class Querier {
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
-            public String onResponse(JSONArray response) {
+            public void onResponse(JSONArray response) {
                 try {
                     final String gotoURL = response.getJSONObject(0).getString("text");
                     v.setOnClickListener(
@@ -62,7 +62,6 @@ public class Querier {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                return "";
             }
         }, new Response.ErrorListener() {
             @Override
@@ -78,8 +77,7 @@ public class Querier {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
-                    public String onResponse(String response) {
-                        return "";
+                    public void onResponse(String response) {
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -98,13 +96,12 @@ public class Querier {
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
-            public String onResponse(JSONArray response) {
+            public void onResponse(JSONArray response) {
                 try {
                     tv.setText(tv.getText() + response.getJSONObject(0).getString("text"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                return "";
             }
         }, new Response.ErrorListener() {
             @Override
@@ -136,8 +133,7 @@ public class Querier {
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
-                    public String onResponse(String response) {
-                        return "";
+                    public void onResponse(String response) {
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -156,13 +152,12 @@ public class Querier {
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
-            public String onResponse(JSONArray response) {
+            public void onResponse(JSONArray response) {
                 try {
                     tv.setText(response.getJSONObject(0).getString("text"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                return "";
             }
         }, new Response.ErrorListener() {
             @Override

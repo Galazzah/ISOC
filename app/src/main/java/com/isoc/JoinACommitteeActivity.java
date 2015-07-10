@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -54,7 +53,7 @@ public class JoinACommitteeActivity extends Activity {
         checkNewsletter.setText("Sign up for ISOC's email newsletter and community alerts");
         checkMember.setText("Contact me with information on becoming an ISOC Member");
 
-        Querier q = new Querier(this);
+        QueryHelper q = new QueryHelper(this);
         final ArrayList<CheckBox> committees = new ArrayList<CheckBox>();
 
         for (int i = 1; i <= 8; i++) {
