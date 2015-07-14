@@ -34,6 +34,7 @@ public class QueryHelper {
     private Context c;
 
     public QueryHelper(Context c) {
+        //get a RequestQueue from the Singleton
         rq = Singleton.getinstance().getmRequestQueue();
         this.c = c;
     }
