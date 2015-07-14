@@ -34,7 +34,7 @@ public class QueryHelper {
     private Context c;
 
     public QueryHelper(Context c) {
-        rq = Volley.newRequestQueue(c);
+        rq = Singleton.getinstance().getmRequestQueue();
         this.c = c;
     }
 

@@ -6,6 +6,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".MyApp"
         android:icon="@mipmap/ic_launcher"
         android:label="RAMADAN 1436 AT ISOC"
         android:theme="@style/MainPage" >
