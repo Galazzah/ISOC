@@ -15,7 +15,7 @@ public class MyApp extends Application {
         super.onCreate();
         sInstance=this;
     }
-    //Getter for context, used to access context for each RequestQueue
+    //Getter for context, used to access context for RequestQueue
     public static Context getAppContext(){
         return sInstance.getApplicationContext();
     }
